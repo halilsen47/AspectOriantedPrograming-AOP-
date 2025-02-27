@@ -15,14 +15,12 @@ namespace Entities
         
         public virtual void Add(int id,string firstname,string lastname)
         {
-            if(id == null || firstname == null || lastname == null)
-                throw new ArgumentNullException();
+         
             Console.WriteLine("Added");
         }
         public virtual void update(int id,string firstname,string lastname)
         {
-            if(id == null || lastname == null || firstname == null)
-                throw new ArgumentNullException();
+           
             Console.WriteLine("Updated");
         }
     }
