@@ -15,13 +15,15 @@ namespace Entities
         
         public virtual void Add(int id,string firstname,string lastname)
         {
-            //Console.WriteLine("Method Body Start!");
-            //Console.WriteLine($"\t{"id",-15} : {id}");
-            //Console.WriteLine($"\t{"FirstName",-15} : {firstname}");
-            //Console.WriteLine($"\t{"LastName",-15} : {lastname}");
-            //Console.WriteLine("Method body End!");
-
+            if(id == null || firstname == null || lastname == null)
+                throw new ArgumentNullException();
             Console.WriteLine("Added");
+        }
+        public virtual void update(int id,string firstname,string lastname)
+        {
+            if(id == null || lastname == null || firstname == null)
+                throw new ArgumentNullException();
+            Console.WriteLine("Updated");
         }
     }
 }
