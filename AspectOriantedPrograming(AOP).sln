@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Proxy", "Proxy", "{2A04E96B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProxyApp", "ProxyApp\ProxyApp.csproj", "{4CD34036-104D-472D-82C0-D33C8D15BF87}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basics", "Basics", "{49CF9A7B-F3EE-4DF6-9E40-4D86E7D9042B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CastleDynamicProxyFirstApp", "CastleDynamicProxyFirstApp\CastleDynamicProxyFirstApp.csproj", "{5FBCBF37-5E84-490D-B45F-F8D5F0066FCA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,8 +21,16 @@ Global
 		{4CD34036-104D-472D-82C0-D33C8D15BF87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CD34036-104D-472D-82C0-D33C8D15BF87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CD34036-104D-472D-82C0-D33C8D15BF87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FBCBF37-5E84-490D-B45F-F8D5F0066FCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FBCBF37-5E84-490D-B45F-F8D5F0066FCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FBCBF37-5E84-490D-B45F-F8D5F0066FCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FBCBF37-5E84-490D-B45F-F8D5F0066FCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4CD34036-104D-472D-82C0-D33C8D15BF87} = {2A04E96B-48C7-4046-9113-3BA41390F315}
+		{5FBCBF37-5E84-490D-B45F-F8D5F0066FCA} = {49CF9A7B-F3EE-4DF6-9E40-4D86E7D9042B}
 	EndGlobalSection
 EndGlobal
