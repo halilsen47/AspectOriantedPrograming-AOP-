@@ -7,14 +7,11 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace İnvocationApp.Aspect
+namespace Core.Aspect
 {
     public class DefansiveProgramingAspect : Methodİnterception
     {
-        public void Intercept(IInvocation invocation)
-        {
-            
-        }
+ 
 
         public override void OnBefore(IInvocation invocation)
         {
@@ -24,7 +21,7 @@ namespace İnvocationApp.Aspect
             {
                 if (parameter.Equals(null))
                     OnException(invocation, new ArgumentNullException());
-                
+
                 Console.WriteLine("Null check has been complated for {0}", invocation.Method);
             }
         }

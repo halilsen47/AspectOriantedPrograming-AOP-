@@ -1,7 +1,7 @@
-﻿using Castle.Components.DictionaryAdapter;
+﻿using Autofac;
+using Castle.Components.DictionaryAdapter;
 using Castle.DynamicProxy;
 using Entities;
-using İnvocationApp.Aspect;
 using System;
 
 namespace İnvocationApp
@@ -11,14 +11,11 @@ namespace İnvocationApp
     {
         static void Main(string[] args)
         {
-            var proxy = new ProxyGenerator();
-            var aspect = proxy
-                .CreateClassProxy<Employee>(
-                    new DefansiveProgramingAspect(),
-                    new İnterceptionAspect()
-                );
-            //aspect.Add(1, "John", "Doe");
-
+            var builder = new ContainerBuilder();
+            builder.RegisterModule(new DefaultModule());
+            
+            var container = builder.Build();
+            var willBeIntercepted = container.Resolve<IEmployee>();
 
             var emp1 = new Employee
             {
@@ -27,7 +24,8 @@ namespace İnvocationApp
                 LastName = "ak"
             };
 
-            aspect.Add(emp1.Id,emp1.FirstName,emp1.LastName);
+            willBeIntercepted.update(emp1.Id,emp1.FirstName,emp1.LastName);
+
 
         }
     }

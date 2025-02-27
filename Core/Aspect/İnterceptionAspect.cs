@@ -6,11 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace İnvocationApp.Aspect
+namespace Core.Aspect
 {
     public class İnterceptionAspect : Methodİnterception
     {
-    
+      
         public override void OnBefore(IInvocation invocation)
         {
             Console.WriteLine("Before {0}", invocation.Method);

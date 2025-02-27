@@ -9,7 +9,7 @@ namespace CastleDynamicProxyFirstApp
     public class MyClass : IMyClass
     {
 
-        [MyInterceptorAspect()]
+        [MyInterceptorAspect(pireority = 1)]
         public virtual void MyMethod()
         {
             Console.WriteLine("MyMethod Body..");
