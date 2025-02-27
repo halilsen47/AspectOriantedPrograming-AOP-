@@ -7,9 +7,10 @@ namespace CastleDynamicProxyFirstApp
 {
     public class MyInterceptorAspect : Methodİnterception
     {
-
+      
         public override void OnBefore(IInvocation invocation)
         {
+            
             Console.WriteLine("Before {0}", invocation.Method);
         }
 
