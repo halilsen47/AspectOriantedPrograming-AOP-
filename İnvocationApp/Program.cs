@@ -24,6 +24,7 @@ namespace İnvocationApp
             {
                 Id = 1,
                 FirstName = "Ahmet",
+                LastName = "ak"
             };
 
             aspect.Add(emp1.Id,emp1.FirstName,emp1.LastName);
